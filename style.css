@@ -1,12 +1,12 @@
 :root {
-  --color-bg: #1c2e24;
-  --color-card: #273e31;
-  --color-inner-card: #324e3f;
-  --color-primary: #52796f;
-  --color-accent: #78a161;
-  --color-accent-hover: #8eb374;
-  --color-text-light: #f4f7f4;
-  --color-text-muted: #cad2c5;
+  --color-bg: #0f172a;
+  --color-card: #1e293b;
+  --color-inner-card: #334155;
+  --color-primary: #475569;
+  --color-accent: #38bdf8;
+  --color-accent-hover: #7dd3fc;
+  --color-text-light: #f8fafc;
+  --color-text-muted: #94a3b8;
 }
 
 * {
@@ -65,7 +65,7 @@ input[type="text"]:focus {
 button {
   padding: 12px 20px;
   background-color: var(--color-accent);
-  color: #121e17;
+  color: #0f172a;
   font-weight: bold;
   border: none;
   border-radius: 8px;
@@ -88,7 +88,7 @@ button:active {
   padding: 25px;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
