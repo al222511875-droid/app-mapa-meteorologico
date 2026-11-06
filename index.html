@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buscador Geográfico Profesional</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador Geográfico Profesional</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<h1> Localizador Geográfico Global </h1>
-<p>Consumo de API OpenStreetMap con control de versiones integral. Por Maria Guadalupe Alva García</p>
-</header>
-<main>
-<div class="search-container">
-<input type="text" id="city-input" placeholder="Introduce un lugar (ej. Monterrey, Madrid)...">
-<button id="search-btn">Consultar API</button>
-</div>
-<div id="weather-card" class="weather-card">
-<p>Introduce una ubicación para desplegar las coordenadas y descripción geográfica. </p>
-</div>
-</main>
-<script src="app.js"></script>
+    <h1>Consumo de API OpenStreetMap con control de versiones integral. Por Maria Guadalupe Alva García</h1>
+    
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Ingresa una ubicación..." value="Toluca">
+        <button id="searchBtn">Consultar API</button>
+    </div>
+
+    <div class="card" id="resultCard">
+        <h3>Ubicación Localizada: <span id="locationTitle">Toluca</span></h3>
+        <div class="info-box">
+            <p id="officialDesc"><strong>Descripción oficial:</strong> Toluca, Estado de México, 50000, México</p>
+            <p><strong>Latitud:</strong> <span id="latText">19.2925450</span> | <strong>Longitud:</strong> <span id="lonText">-99.6569007</span></p>
+        </div>
+        
+        <hr>
+
+        <h3>PARÁMETROS CLIMATOLÓGICOS</h3>
+        <div class="info-box">
+            <p><strong>Temperatura:</strong> <span id="tempText">16.5°C</span></p>
+            <p><strong>Humedad:</strong> <span id="humidityText">70%</span></p>
+            <p><strong>Condición:</strong> <span id="conditionText">Lluvia Ligera</span></p>
+        </div>
+        
+        <p style="margin-top: 15px; font-size: 0.85rem;">Datos de mapa meteorológico sincronizados con éxito.</p>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
